@@ -29,6 +29,7 @@ http://localhost:8080
 
 Illetve el lehet érni az adatokat REST api-kon keresztül, felvenni új köridőt egy futóhoz.
 Ezekhez a Postman collectiont a /src/test/postman/ könyvtárban találjátok.
+A feladatok elvégzése után a módosított (Postman-ből kiexportált) collection-nel írjátok felül ezt!
 
 ### Feladatok
 
