@@ -57,7 +57,7 @@ public class DataLoader implements CommandLineRunner {
         runnerRepository.save(runnerEntity2);
 
         //adding another runner
-        unnerEntity runnerEntity3 = new RunnerEntity();
+        RunnerEntity runnerEntity3 = new RunnerEntity();
         runnerEntity3.setRunnerName("Tomi");
         runnerEntity3.setAveragePace(310);
         runnerEntity3.setHeight(180);
