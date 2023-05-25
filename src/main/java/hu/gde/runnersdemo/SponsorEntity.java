@@ -16,6 +16,14 @@ public class SponsorEntity {
     @OneToMany(mappedBy = "sponsorName", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RunnerEntity> sponsors = new ArrayList<>();
 
+    public void setSponsors(List<RunnerEntity> sponsors) {
+        this.sponsors = sponsors;
+    }
+
+    public List<RunnerEntity> getSponsors() {
+        return sponsors;
+    }
+
     public long getSponsorId() {
         return sponsorId;
     }

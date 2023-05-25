@@ -105,7 +105,7 @@ public class RunnerRestController {
 
         private String sponsorName;
 
-        public String getshoeName(String sponsorName) {
+        public String getSponsorName(String sponsorName) {
             return sponsorName;
         }
 
