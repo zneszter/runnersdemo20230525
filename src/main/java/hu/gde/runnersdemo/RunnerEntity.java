@@ -16,11 +16,11 @@ public class RunnerEntity {
     private String sponsorName;
 
     public String getSponsorName() {
-        return shoeName;
+        return sponsorName;
     }
 
-    public void setSponsorName(String shoeName) {
-        this.shoeName = shoeName;
+    public void setSponsorName(String sponsorName) {
+        this.sponsorName = sponsorName;
     }
 
     public long getHeight() {
