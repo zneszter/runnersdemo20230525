@@ -144,6 +144,14 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "postSponsorName",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
