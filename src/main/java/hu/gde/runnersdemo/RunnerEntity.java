@@ -13,6 +13,16 @@ public class RunnerEntity {
     private long averagePace;
     private long height;
 
+    private String shoeName;
+
+    public String getShoeName() {
+        return shoeName;
+    }
+
+    public void setShoeName(String shoeName) {
+        this.shoeName = shoeName;
+    }
+
     public long getHeight() {
         return height;
     }
