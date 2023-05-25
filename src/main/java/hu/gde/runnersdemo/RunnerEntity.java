@@ -13,13 +13,13 @@ public class RunnerEntity {
     private long averagePace;
     private long height;
 
-    private String shoeName;
+    private String sponsorName;
 
-    public String getShoeName() {
+    public String getSponsorName() {
         return shoeName;
     }
 
-    public void setShoeName(String shoeName) {
+    public void setSponsorName(String shoeName) {
         this.shoeName = shoeName;
     }
 
