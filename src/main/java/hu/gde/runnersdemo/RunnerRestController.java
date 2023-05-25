@@ -14,6 +14,7 @@ public class RunnerRestController {
     @Autowired
     private LapTimeRepository lapTimeRepository;
     private RunnerRepository runnerRepository;
+    private SponsorRepository sponsorRepository;
 
     @Autowired
     public RunnerRestController(RunnerRepository runnerRepository, LapTimeRepository lapTimeRepository) {
@@ -62,6 +63,18 @@ public class RunnerRestController {
         return runnerRepository.findAll();
     }
 
+    @PostMapping("/{id}/updatesponsor")
+    public ResponseEntity updatesponsor(@PathVariable Long id, @RequestBody SponsorNameRequest sponsorNameRequest) {
+        RunnerEntity runner = runnerRepository.findById(id).orElse(null);
+        if (runner != null) {
+            runner.setSponsorName(sponsorNameRequest.sponsorName);
+            runnerRepository.save(runner);
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Runner with ID " + id + " not found");
+        }
+    }
+
     @PostMapping("/{id}/addlaptime")
     public ResponseEntity addLaptime(@PathVariable Long id, @RequestBody LapTimeRequest lapTimeRequest) {
         RunnerEntity runner = runnerRepository.findById(id).orElse(null);
@@ -85,6 +98,19 @@ public class RunnerRestController {
 
         public void setLapTimeSeconds(int lapTimeSeconds) {
             this.lapTimeSeconds = lapTimeSeconds;
+        }
+    }
+
+    public static class SponsorNameRequest {
+
+        private String sponsorName;
+
+        public String getshoeName(String sponsorName) {
+            return sponsorName;
+        }
+
+        public void setSponsorName(String sponsorName) {
+            this.sponsorName = sponsorName;
         }
     }
 }
